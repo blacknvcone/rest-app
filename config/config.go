@@ -70,25 +70,25 @@ func InitConfig() {
 	}
 
 	configData = &Config{
-		DB: DB{
-			DSN:             getRequiredString("DB_DSN"),
-			DSNPool:         getRequiredString("DB_POOL_DSN"),
-			MaxOpenConn:     getRequiredInt("DB_MAX_OPEN_CONN"),
-			MaxIdleConn:     getRequiredInt("DB_MAX_IDLE_CONN"),
-			MaxLifetimeConn: getRequiredInt("DB_MAX_LIFETIME_CONN"),
-			MaxIdletimeConn: getRequiredInt("DB_MAX_IDLETIME_CONN"),
-		},
-		App: app{
-			Env:     getRequiredString("APP_ENV"),
-			Version: viper.GetString("BITBUCKET_TAG"),
-			Name:    "rest-app",
-		},
+		// DB: DB{
+		// 	DSN:             getRequiredString("DB_DSN"),
+		// 	DSNPool:         getRequiredString("DB_POOL_DSN"),
+		// 	MaxOpenConn:     getRequiredInt("DB_MAX_OPEN_CONN"),
+		// 	MaxIdleConn:     getRequiredInt("DB_MAX_IDLE_CONN"),
+		// 	MaxLifetimeConn: getRequiredInt("DB_MAX_LIFETIME_CONN"),
+		// 	MaxIdletimeConn: getRequiredInt("DB_MAX_IDLETIME_CONN"),
+		// },
+		// App: app{
+		// 	Env:     getRequiredString("APP_ENV"),
+		// 	Version: viper.GetString("BITBUCKET_TAG"),
+		// 	Name:    "rest-app",
+		// },
 		Http: http{
 			Port: getRequiredInt("APP_PORT"),
 		},
-		JWT: jwt{
-			SigningKey: getRequiredString("SIGNING_KEY"),
-		},
+		// JWT: jwt{
+		// 	SigningKey: getRequiredString("SIGNING_KEY"),
+		// },
 		// HuggingFaceAPIConf: HuggingFaceAPIConf{
 		// 	URL:      getRequiredString("HUGGINGFACE_API_URL"),
 		// 	Model:    getRequiredString("HUGGINGFACE_API_MODEL"),
