@@ -1,6 +1,10 @@
 include .env
 .PHONY: test clean build
 
+install-deps:
+    brew update
+    brew install tesseract leptonica opencv pkg-config libglvnd
+	
 build:
 	go mod download
 	go build -o setup main.go
